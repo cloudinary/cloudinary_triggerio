@@ -1,0 +1,12 @@
+{
+    "ios": {
+        "device": "simulator", 
+        "simulatorsdk": "5.1", 
+        "simulatorfamily": "iphone"
+    }, 
+    "general": {
+        "reload": {
+            "external": false
+        }
+    }
+}

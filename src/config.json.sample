@@ -1,0 +1,26 @@
+{
+	"config_version": "2",
+	"name": "Cloudinary Test",
+	"author": "tal.levami@cloudinary.com",
+	"version": "0.1",
+	"platform_version": "v1.4",
+	"description": "An empty app created by default",
+	"modules": {
+		"logging": {
+			"level": "DEBUG"
+		},
+		"contact": true,
+		"file": true,
+		"is": true,
+		"media": true,
+		"prefs": true,
+		"request": {
+			"permissions": ["http://*/*", "https://*/*"]
+		},
+		"tools": true,
+		"reload": true,
+        	"parameters": {
+	            "CLOUDINARY_URL": "cloudinary://myapikey:myapisecret@mycloudname"
+		}	
+	}
+}
