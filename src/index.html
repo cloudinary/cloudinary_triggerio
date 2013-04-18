@@ -2,9 +2,29 @@
   "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script src="https://trigger.io/catalyst/target/target-script-min.js#E713A5F6-9E54-4984-A828-16E00E5075E5"></script>
+
+  <script type="text/javascript" src="js/lib/underscore-min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="js/lib/sha1.js"></script>
+  <script type="text/javascript" src="js/lib/cloudinary.triggerio.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $('.select-image').click(function() {
+         forge.file.getImage(function(file) {
+           $.cloudinary.uploader.upload(file, function(result) { $('.image').append($.cloudinary.image(result.public_id, {format: result.format, width: 200, height: 100, crop: "fill", effect: "sepia", radius: 20}));});
+         });
+         return false;
+      });
+    });
+  </script>
+  
 </head>
 
 <body>
+<h1>Cloudinary Sample</h1>
+<a href="#" class="select-image">Select image to upload</a>
+<div class="image"></div>
 <a href="spec/test.html">Unit tests</a>
 </body>
 </html>
