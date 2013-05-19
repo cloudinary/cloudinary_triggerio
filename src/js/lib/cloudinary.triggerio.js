@@ -424,6 +424,7 @@
       eager: build_eager(options.eager),
       headers: build_custom_headers(options.headers),
       use_filename: options.use_filename,
+      discard_original_filename: options.discard_original_filename,
       notification_url: options.notification_url,
       eager_notification_url: options.eager_notification_url,
       eager_async: options.eager_async,
