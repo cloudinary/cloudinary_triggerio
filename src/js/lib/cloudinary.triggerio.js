@@ -439,7 +439,7 @@
     return call_api("upload", callback, options, function() {
       var params;
       params = build_upload_params(options);
-      if (_.isString(file) && (file.match(/^https?:/) || file.match(/^data:image\/\w*;base64,([a-zA-Z0-9\/+\n=]+)$/))) {
+      if (_.isString(file) && file.match(/^https?:|^s3:|^data:image\/\w*;base64,([a-zA-Z0-9\/+\n=]+)$/)) {
         return [params, {file: file}];
       } else {
         return [params, {}, file];
